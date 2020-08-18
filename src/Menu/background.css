@@ -48,7 +48,7 @@
     left: 8px;
     animation-name: bigFontAnime;
     animation-duration: 0.5s;
-    color:#333333;
+    color:#990000;
 }
 @keyframes bigFontAnime{
     from {
@@ -58,6 +58,17 @@
     to {left: 8px;
         
     }
+}
+.showStyle{
+    position: relative;
+}
+.showStyle:hover{
+    animation-name: showAnime;
+    animation-duration: 0.3s;
+}
+@keyframes showAnime{
+    from {left: 0px}
+    to {left:10px}
 }
 
 

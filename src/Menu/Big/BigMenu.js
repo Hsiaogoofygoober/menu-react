@@ -9,7 +9,7 @@ import {
   } from "react-router-dom";
 
 
-function SmallMenu(){
+function BigMenu(){
     const [show,setShow]=useState(itemData)
     const [render,setRender] = useState(0)
     function allocateShow(amount){
@@ -20,10 +20,9 @@ function SmallMenu(){
     return(
     <Router>
     <div className="flex">
-        {console.log("render")}
         <div>
         <ul className="bigbackground" style={{position:"fixed",background:itemConfig.background, color:itemConfig.fontColor}}>
-        <BigItem item={itemData} show={show} allocateShow={allocateShow}/>
+        <BigItem show={show} allocateShow={allocateShow}/>
         </ul>
     </div>
     <div className="moveRight">
@@ -43,4 +42,4 @@ function SmallMenu(){
     )
 }
 
-export default SmallMenu
+export default BigMenu

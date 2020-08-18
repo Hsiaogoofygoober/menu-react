@@ -7,8 +7,14 @@ import {
     Route,
   } from "react-router-dom";
 
-function BigMenu(){
+function SmallMenu(){
     const [show,setShow] = useState(false)
+    const [item,setItem] = useState(itemData)
+    const [render,setRender] = useState(0)
+    function allocateShow(amount){
+        setItem(amount)
+        setRender(render+1)
+    }
     if(show){
         return(            
     <div>
@@ -20,7 +26,7 @@ function BigMenu(){
         <ul className="smallbackground" style={
             {background:itemConfig.background, color:itemConfig.fontColor}}>
         <h2 style={{textAlign:"center"}}>Menu</h2>
-        <SmallItem/>
+        <SmallItem show={item} allocateShow={allocateShow}/>
         </ul>
         <div style={{textAlign:"center"}}>
         <Switch>
@@ -63,4 +69,4 @@ function BigMenu(){
     
 }
 
-export default BigMenu
+export default SmallMenu

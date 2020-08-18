@@ -1,17 +1,18 @@
 import React from 'react';
 import itemData from '../MenuData'
-import {itemConfig} from '../MenuData'
+import SetActivePages from '../Big/SetActivePages'
 import {
     Link
   } from "react-router-dom";
 
-function SmallItem(){
+function SmallItem(props){
     const itemList= itemData.map((e)=>
-        <li key={e.id}>
-            <i className={e.icon}></i>
+        <li key={e.id} className="showStyle" onClick={()=>{
+            props.allocateShow(SetActivePages(e.id, props.show))
+         }}>
             <Link to={e.path} 
-            
-            style={{textDecoration:"none",color:itemConfig.fontColor}}>
+            style={{textDecoration:"none",color:e.color}}>
+                <i className={e.icon}></i>
                 <span className='smallFontStyle' >{e.name}</span>
             </Link>
             </li>
