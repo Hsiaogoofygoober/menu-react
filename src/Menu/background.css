@@ -1,0 +1,63 @@
+.bigbackground{
+    padding: 5px;
+    width: 5em;
+    list-style-type:none;
+    font-size: 25px;
+    line-height: 50px;
+    animation-name: backgroundanime;
+    animation-duration: 0.5s;
+}
+.bigToSmall{
+    position: absolute;
+    animation-name: bigToSmallAnime;
+    animation-duration: 0.5s;
+}
+@keyframes bigToSmallAnime{
+    from {left:5em}
+    to {left: 8px}
+}
+.smallbackground{
+    padding: 5px;
+    width: 5em;
+    list-style-type:none;
+    font-size: 22px;
+    line-height: 50px;
+    text-align: left;
+    animation-name: backgroundanime;
+    animation-duration: 0.5s;
+}
+@keyframes  backgroundanime{
+    from {display:none;
+        width: 0em;}
+    to {display: inline;
+        width: 5em;} 
+}
+.smallFontStyle{
+    position: relative;
+    left: 6px;
+    animation: smallFontAnime;
+    animation-duration: 0.5s;
+}
+@keyframes smallFontAnime{
+    0% {font-size:0px;}
+    50% {font-size:0px;}
+    100% {font-size: 22px;}
+}
+.bigFontStyle{
+    position: relative;
+    left: 8px;
+    animation-name: bigFontAnime;
+    animation-duration: 0.5s;
+    color:#333333;
+}
+@keyframes bigFontAnime{
+    from {
+        left: 0px;
+        color: white;
+    }
+    to {left: 8px;
+        
+    }
+}
+
+
