@@ -10,9 +10,13 @@ function SmallItem(props){
         <li key={e.id} className="showStyle" onClick={()=>{
             props.allocateShow(SetActivePages(e.id, props.show))
          }}>
+             <Link to={e.path}
+             style={{textDecoration:"none",color:e.color}}>
+                <i className={e.icon}></i>
+             </Link>
             <Link to={e.path} 
             style={{textDecoration:"none",color:e.color}}>
-                <i className={e.icon}></i>
+                
                 <span className='smallFontStyle' >{e.name}</span>
             </Link>
             </li>

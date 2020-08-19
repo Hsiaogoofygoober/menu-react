@@ -1,11 +1,11 @@
 import React from 'react'
-import itemData from '../MenuData'
+import itemData, { itemConfig } from '../MenuData'
 import SetActivePages from './SetActivePages'
 import '../typesetting.css'
 import {
     Link
   } from "react-router-dom";
-import {itemConfig} from '../MenuData'
+
 
 
 function BigItem(props){
@@ -23,6 +23,7 @@ function BigItem(props){
             <Link to={e.path} 
             style={{textDecoration:"none",color:e.fontColor, display:e.titleStyle}}>
                 <span
+                style={{color:itemConfig.colorChange}}
                     className="bigFontStyle"
                 >{e.name}</span>
             </Link>

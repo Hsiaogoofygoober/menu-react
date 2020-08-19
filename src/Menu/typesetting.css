@@ -2,11 +2,6 @@
     display: flex;
     flex-direction:row;
 }
-.textStyle{
-    color:"white";
-    font-size:"20px";
-    margin-left:"13px";
-}
 .moveRight{
    position: absolute;
    left: 9em;

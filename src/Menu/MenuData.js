@@ -15,7 +15,7 @@ const itemData = [
         icon:"fas fa-home",
         exact:true,
         titleStyle: 'none',
-        color:'#ffffff'
+        color:'#4d4d00'
     },
     {
         id: 2,
@@ -24,7 +24,7 @@ const itemData = [
         path:"/page1",
         icon:"far fa-comment-dots",
         titleStyle: 'none',
-        color:'#ffffff'
+        color:'#4d4d00'
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ const itemData = [
         path:"/page2",
         icon:"fas fa-paperclip",
         titleStyle: 'none',
-        color:'#ffffff'
+        color:'#4d4d00'
     },
     {
         id: 4,
@@ -42,7 +42,7 @@ const itemData = [
         path:"/page3",
         icon:"fas fa-feather-alt",
         titleStyle: 'none',
-        color:'#ffffff'
+        color:'#4d4d00'
     },
     {
         id: 5,
@@ -51,7 +51,7 @@ const itemData = [
         path:"/page4",
         icon:"fab fa-sistrix",
         titleStyle: 'none',
-        color:'#ffffff'
+        color:'#4d4d00'
     },
     {
         id: 6,
@@ -60,13 +60,14 @@ const itemData = [
         path:"/page5",
         icon:"fas fa-address-book",
         titleStyle: 'none',
-        color:'#ffffff'
+        color:'#4d4d00'
     }
 ]
 const itemConfig = {
     id:1,
-    background: "#808080",
-    fontColor: "#ffffff"
+    background: "#ffffb3",
+    fontColor: "#4d4d00",
+    colorChange: "#99ccff"
 }
 
 const button={
