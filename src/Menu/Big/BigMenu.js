@@ -21,7 +21,7 @@ function BigMenu(){
     <Router>
     <div className="flex">
         <div>
-        <ul className="bigbackground" style={{position:"fixed",background:itemConfig.background, color:itemConfig.fontColor}}>
+        <ul  className="bigbackground" style={{position:"fixed",background:itemConfig.background, color:itemConfig.fontColor}}>
         <BigItem show={show} allocateShow={allocateShow}/>
         </ul>
     </div>

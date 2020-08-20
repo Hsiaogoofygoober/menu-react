@@ -8,7 +8,8 @@ import {
 function SmallItem(props){
     const itemList= itemData.map((e)=>
         <li key={e.id} className="showStyle" onClick={()=>{
-            props.allocateShow(SetActivePages(e.id, props.show))
+            props.allocateShow(SetActivePages(e.id, props.item))
+            props.setShow(false)
          }}>
              <Link to={e.path}
              style={{textDecoration:"none",color:e.color}}>

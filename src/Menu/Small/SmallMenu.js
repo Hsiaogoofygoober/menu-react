@@ -26,7 +26,7 @@ function SmallMenu(){
         <ul className="smallbackground" style={
             {background:itemConfig.background, color:itemConfig.fontColor}}>
         <h2 style={{textAlign:"center"}}>Menu</h2>
-        <SmallItem show={item} allocateShow={allocateShow}/>
+        <SmallItem item={item} allocateShow={allocateShow} setShow={setShow}/>
         </ul>
         <div style={{textAlign:"center"}}>
         <Switch>

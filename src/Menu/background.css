@@ -1,11 +1,18 @@
 .bigbackground{
     padding: 5px;
-    width: 5em;
+    width: 27px;
     list-style-type:none;
     font-size: 25px;
     line-height: 50px;
     animation-name: backgroundanime;
     animation-duration: 0.5s;
+    z-index: 1;
+}
+@keyframes  backgroundanime{
+    from {
+        width: 0em;}
+    to {
+        width: 27px;} 
 }
 .bigToSmall{
     position: absolute;
@@ -23,13 +30,14 @@
     font-size: 22px;
     line-height: 50px;
     text-align: left;
-    animation-name: backgroundanime;
+    animation-name: smallBackgroundanime;
     animation-duration: 0.5s;
+    animation-direction:alternate;
 }
-@keyframes  backgroundanime{
-    from {display:none;
+@keyframes  smallBackgroundanime{
+    from {
         width: 0em;}
-    to {display: inline;
+    to {
         width: 5em;} 
 }
 .smallFontStyle{
@@ -45,18 +53,20 @@
 }
 .bigFontStyle{
     position: relative;
-    left: 8px;
+    left: 4px;
+    width: 85px;
     animation-name: bigFontAnime;
     animation-duration: 0.5s;
+    
     
 }
 @keyframes bigFontAnime{
     from {
-        left: 0px;
-        color: white;
+        width:0px;
+        color:wheat;
     }
-    to {left: 8px;
-        
+    to {
+        width: 85px;
     }
 }
 .showStyle{

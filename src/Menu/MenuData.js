@@ -15,7 +15,7 @@ const itemData = [
         icon:"fas fa-home",
         exact:true,
         titleStyle: 'none',
-        color:'#4d4d00'
+        color:'#4d4d00',
     },
     {
         id: 2,
