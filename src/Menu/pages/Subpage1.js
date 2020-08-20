@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Page1(){
+function Subpage1(){
     return(
         <div>
         <h1>Page1</h1>
@@ -19,4 +19,4 @@ function Page1(){
     )
 }
 
-export default Page1
+export default Subpage1

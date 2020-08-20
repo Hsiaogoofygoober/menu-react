@@ -11,35 +11,12 @@ import {
 
 function BigItem(props){
     const itemList= itemData.map((e)=>
-        <li key={e.id} className="flex">
-            <Link to={e.path}
-            style={{textDecoration:"none",color:e.color}}>
-            <span> 
-            <i className={e.icon} onClick={()=>{
-                
-                if(e.titleStyle === "inline"){
-                    props.allocateShow(Clean(props.show))
-                    
-                }
-                else{
-                    props.allocateShow(SetActivePages(e.id, props.show)) 
-                }
-                  
-             }}
-            ></i>
-            </span>
-            </Link>
-            <Link to={e.path} 
-            style={{textDecoration:"none", display:e.titleStyle}}>
-                <div
-                style={{color:itemConfig.colorChange,
-                        background:itemConfig.background,
-                        
-                }}
-                className='bigFontStyle'
-                >{e.name}</div>
-            </Link>
-            </li>
+    <li key={e.id}>
+       <i className={e.icon}
+        onClick={()=>SetActivePages(e.id,props.show)}>
+        </i>
+         
+    </li>
     ) 
 
     return itemList
