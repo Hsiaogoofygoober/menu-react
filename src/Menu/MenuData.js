@@ -8,31 +8,24 @@ import Subpage6 from './pages/SubPage6'
 
 
 const itemData = [
+   
     {
-        id:1,
-        name:"home",
-        function: Home,
-        path:"/",
-        icon:"fas fa-home",
-        exact:true,
-        titleStyle: 'none',
-        color:'#4d4d00',
-    },
-    {
-        id: 2,
+        id: 0,
         name: "button1",
         icon:"far fa-comment-dots",
         titleStyle: 'none',
         color:'#4d4d00',
         submenu:[
         {
-            id:'a',
+            id: 1,
+            index:0,
             name:"subpage1",
             path:"/subpage1",
             function: Subpage1,
         },
         {
-            id:'b',
+            id: 2,
+            index:1,
             name:"subpage2",
             path:"/subpage2",
             function: Subpage2,
@@ -40,20 +33,22 @@ const itemData = [
         ]
     },
     {
-        id: 3,
+        id: 1,
         name: "button2",
         icon:"fas fa-paperclip",
         titleStyle: 'none',
         color:'#4d4d00',
         submenu:[
             {
-                id:'c',
+                id: 3,
+                index:0,
                 name:"subpage3",
                 path:"/subpage3",
                 function: Subpage3,
             },
             {
-                id:'d',
+                id:4,
+                index:1,
                 name:"subpage4",
                 path:"/subpage4",
                 function: Subpage4,
@@ -61,20 +56,22 @@ const itemData = [
             ]
     },
     {
-        id: 4,
+        id: 2,
         name: "button3",
         icon:"fas fa-feather-alt",
         titleStyle: 'none',
         color:'#4d4d00',
         submenu:[
             {
-                id:'e',
+                id:5,
+                index:0,
                 name:"subpage5",
                 path:"/subpage5",
                 function: Subpage5,
             },
             {
-                id:'f',
+                id:6,
+                index:1,
                 name:"subpage6",
                 path:"/subpage6",
                 function: Subpage6,

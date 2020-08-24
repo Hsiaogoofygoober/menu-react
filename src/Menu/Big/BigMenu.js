@@ -16,7 +16,7 @@ function BigMenu(){
         setShow(amount)
         setRender(render+1)
     }
-
+    console.log("oo")
     return(
     <Router>
     <div className="flex">
@@ -26,16 +26,23 @@ function BigMenu(){
         </ul>
     </div>
     <div className="moveRight">
-    <Switch>
-            {itemData.map(route=>(
-                <Route
-                    key={route.id}
-                    path={route.path}
-                    children={route.function}
-                    exact={route.exact}
-                />
+    
+        <Switch>
+           {itemData.map(route=>(
+               route.submenu.forEach(e => {
+                   
+                   return(
+                    <Route
+                        key={route.submenu[e.index].id}
+                        path={route.submenu[e.index].path} 
+                        children={route.submenu[e.index].function}
+                    /> 
+                   )
+               })
             ))}
         </Switch>
+    
+    
     </div>
     </div>
     </Router>
