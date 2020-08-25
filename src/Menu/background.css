@@ -1,6 +1,6 @@
 .bigbackground{
     padding: 5px;
-    width: 27px;
+    width: 5em;
     list-style-type:none;
     font-size: 25px;
     line-height: 50px;
@@ -12,7 +12,7 @@
     from {
         width: 0em;}
     to {
-        width: 27px;} 
+        width: 5em;} 
 }
 .bigToSmall{
     position: absolute;
@@ -51,27 +51,11 @@
     50% {font-size:0px;}
     100% {font-size: 22px;}
 }
-.bigFontStyle{
-    position: relative;
-    left: 4px;
-    width: 85px;
-    animation-name: bigFontAnime;
-    animation-duration: 0.5s;
-    
-    
-}
-@keyframes bigFontAnime{
-    from {
-        width:0px;
-        color:wheat;
-    }
-    to {
-        width: 85px;
-    }
-}
+
 .showStyle{
     position: relative;
     left:5px;
+    font-weight: 400;
 }
 .showStyle:hover{
     animation-name: showAnime;
@@ -80,6 +64,16 @@
 @keyframes showAnime{
     from {left: -5px;}
     to {left:5px;}
+}
+.submenuBackground{
+    height:2em;
+    text-align: center;
+    animation-name: submanuAnime;
+    animation-duration: 0.5s;
+}
+@keyframes submanuAnime{
+    from {height: 0px;}
+    to {height: 2em;}
 }
 
 

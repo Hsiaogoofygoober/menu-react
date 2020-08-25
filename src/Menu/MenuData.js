@@ -6,9 +6,16 @@ import Subpage4 from './pages/Subpage4'
 import Subpage5 from './pages/Subpage5'
 import Subpage6 from './pages/SubPage6'
 
-
+const homeConfig={
+    name:"home",
+    icon:"fas fa-home",
+    color:'#4d4d00',
+    path:"/",
+    function:Home,
+    exact: true
+}
 const itemData = [
-   
+    
     {
         id: 0,
         name: "button1",
@@ -78,14 +85,18 @@ const itemData = [
             },  
             ]
     },
+    
 ]
 const itemConfig = {
     id:1,
     background: "#ffffb3",
     fontColor: "#4d4d00",
-    colorChange: "#99ccff"
+    colorChange: "#ff6600"
 }
-
+const submenuData = {
+    
+    background:"#ffcc66"
+}
 const button={
     id:1,
     listButton:"fas fa-bars fa-2x",
@@ -93,5 +104,5 @@ const button={
 }
 
 
-export  {itemData,itemConfig,button}
+export  {itemData,itemConfig,button,submenuData,homeConfig}
 export default itemData

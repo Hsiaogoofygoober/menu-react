@@ -1,4 +1,4 @@
-import {itemConfig} from "../MenuData"
+import {itemConfig} from "./MenuData"
 
 function Clean(show){
     var a = show
