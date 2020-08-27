@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
-import itemData, { itemConfig, button } from '../MenuData'
-import SmallItem from './SmallItem'
+import itemData, { itemConfig, button, homeConfig } from '../config/menuData'
+import SmallItem from './item'
 import {
     BrowserRouter as Router,
     Switch,
     Route,
   } from "react-router-dom";
 
-function SmallMenu(){
+function Menu(){
     const [show,setShow] = useState(false)
     const [item,setItem] = useState(itemData)
     const [render,setRender] = useState(0)
@@ -30,13 +30,21 @@ function SmallMenu(){
         </ul>
         <div style={{textAlign:"center"}}>
         <Switch>
-            {itemData.map(route=>(
+        <Route
+            path={homeConfig.path}
+            name = {homeConfig.name}
+            children={homeConfig.function}
+            exact={homeConfig.exact}
+        />
+           {itemData.map(route=>(
+               route.submenu.map(e => (
                 <Route
-                    key={route.id}
-                    path={route.path}
-                    children={route.function}
-                    exact={route.exact}
-                />
+                  key={e.id}
+                  path={e.path} 
+                  children={e.function}
+                /> 
+               )
+               )
             ))}
         </Switch>
         </div>
@@ -52,14 +60,21 @@ function SmallMenu(){
                 <div className="bigToSmall">
                 <Router>
                 <Switch>
-                    {itemData.map(route=>(
-                    <Route
-                    key={route.id}
-                    path={route.path}
-                    children={route.function}
-                    exact={route.exact}
-                    />
-                     ))}
+                <Route
+                path={homeConfig.path}
+                name = {homeConfig.name}
+                children={homeConfig.function}
+                exact={homeConfig.exact}
+                />
+                {itemData.map(route=>(
+                route.submenu.map(e => (
+                <Route
+                  key={e.id}
+                  path={e.path} 
+                  children={e.function}
+                /> )
+                )
+                ))}
                 </Switch>
                 </Router>
                 </div>
@@ -69,4 +84,4 @@ function SmallMenu(){
     
 }
 
-export default SmallMenu
+export default Menu

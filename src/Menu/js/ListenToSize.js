@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
-import SmallMenu from './Small/SmallMenu'
-import BigMenu from './Big/BigMenu'
+import SmallMenu from '../small-screen/menu'
+import LargeMenu from '../large-screen/menu'
 function ListenToSize(){
    const [change,setChange] = useState(true)
     
@@ -22,7 +22,7 @@ function ListenToSize(){
         return(<SmallMenu/>)
     }
     else{
-        return(<BigMenu/>)
+        return(<LargeMenu/>)
     }
 }
 
