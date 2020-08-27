@@ -27,54 +27,65 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### 'Versions'
-node.js version: "v12.18.2"
+### `Versions`
+node.js version: `v12.18.2`
 
-### 'Requirement'
+### `Requirement`
 
-"react": "^16.13.1"
-"react-dom": "^16.13.1"
-"react-router-dom": "^5.2.0"
-"react-scripts": "3.4.1"
+"react": `^16.13.1`
+"react-dom": `^16.13.1`
+"react-router-dom": `^5.2.0`
+"react-scripts": `3.4.1`
 
-### 'Usage'
-## Config file
-const 'homeConfig'={
-    name:'home',          *Name of the icon button*
-    icon:"fas fa-home",   *The code used from Font Awesome to show the icon button*
-    color:'#4d4d00',      *The initial color of the icon and the name*
-    path:"/",             *The webpage path*
-    function:Home,        *The function of the page*
-    exact: true           *Let the user led to the path correctly*
+### `Usage`
+#### Config file
+
+```
+const homeConfig=
+{
+    name:'home',          *Name of the icon button*<br>
+    icon:"fas fa-home",   *The code used from Font Awesome to show the icon button*<br>
+    color:'#4d4d00',      *The initial color of the icon and the name*<br>
+    path:"/",             *The webpage path*<br>
+    function:Home,        *The function of the page*<br>
+    exact: true           *Let the user led to the path correctly*<br>
 }
-const 'itemData' = [
-    
+```
+```
+const itemData =   
+{
+    id: 0,                     *The id of the object*
+    name: "button1",           *Name of the icon button*
+    icon:"far fa-comment-dots",*The code used from Font Awesome to show the icon*
+    titleStyle: 'none',        *Set to 'none' when initialize if you want the submenu invisible*
+    color:'#4d4d00',           *The initial color of the icon and the name*
+    submenu:[
     {
-        id: 0,                     *The id of the object*
-        name: "button1",           *Name of the icon button*
-        icon:"far fa-comment-dots",*The code used from Font Awesome to show the icon*
-        titleStyle: 'none',        *Set to 'none' when initialize if you want the submenu invisible*
-        color:'#4d4d00',           *The initial color of the icon and the name*
-        submenu:[
-        {
-            id: 1,                 *The id of the submenu object*
-            index:0,               *The index of the submenu object, and needed to be set to '0'*
-                                   *when initailize*
-            name:"subpage1",       *Name of the submenu item*
-            path:"/subpage1",      *Path of the submenu page*
-            function: Subpage1,    *Fuction of the submenu page*
-        },
-       ]
+        id: 1,                 *The id of the submenu object*
+        index:0,               *The index of the submenu object, and needed to be set to '0'*
+                               *when initailize*
+        name:"subpage1",       *Name of the submenu item*
+        path:"/subpage1",      *Path of the submenu page*
+        function: Subpage1,    *Fuction of the submenu page*
     },
+   ]
+}
+```
+```
 const itemConfig = {
     background: "#ffffb3",         *The color of menu background*
     fontColor: "#4d4d00",          *The color of icon and font*
     colorChange: "#ff6600"         *The color change to when we click icon or name*
 }
+```
+```
 const submenuData = {  
     background:"#ffcc66"           *The color of submenu background*
 }
+```
+```
 const button={
     listButton:"fas fa-bars fa-2x", *The code used from Font Awesome to show the icon button--list*
     crossButton:"fas fa-times fa-2x"*The code used from Font Awesome to show the icon button--cross*
 }
+```
