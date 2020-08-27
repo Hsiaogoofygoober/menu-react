@@ -1,49 +1,47 @@
-import React from 'react'
-import itemData, { itemConfig, submenuData, homeConfig } from '../MenuData'
-import SetActivePages from '../SetActivePages'
-import Clean from '../Clean'
-import '../typesetting.css'
+import React from 'react';
+import itemData, {itemConfig, submenuData, homeConfig} from '../config/menuData'
+import SetActivePages from '../js/SetActivePages'
+import Clean from '../js/Clean'
+import fontcolorChange from '../js/fontcolorChange'
 import {
     Link
   } from "react-router-dom";
 
-
-
-function BigItem(props){
-
+function Item(props){
     const itemList= itemData.map((e)=>
-    <li key={e.id} style={{color:e.color}}>
+    <li key={e.id}>
+      <Link to='#' style={{color:e.color}}>
       <i className={e.icon}>
         <span
-        className="showStyle"
+        className="showStyle" 
         onClick={
          ()=>{
            if(e.titleStyle==="none"){
-              props.allocateShow(SetActivePages(e.id,props.show))
-              
+              props.allocateShow(SetActivePages(e.id,props.item))
            }
            else if(e.titleStyle==="inline"){
-             props.allocateShow(Clean(props.show))
-             
+             props.allocateShow(Clean(props.item))
            }
           }
         }>
           {e.name}
         </span>
       </i>
-      
+      </Link>
     <div style={{display:e.titleStyle}}>    
-
-         {e.submenu.map(link => {
+    {
+      e.submenu.map(link => {
          return(
            <div key={link.id} 
            className="submenuBackground"
            style={{background: submenuData.background}}>
            <Link to={link.path} 
-           
+           onClick={()=>{
+            props.allocateShow(fontcolorChange(link.id,props.item))
+           }}
            style={{
             textDecoration:'none',
-            color: itemConfig.fontColor
+            color: link.color
             }}>
              {link.name}
            </Link>
@@ -57,7 +55,7 @@ function BigItem(props){
 
     return (
       <div>
-      <li style={{color:itemConfig.colorChange}}>
+        <li style={{color:itemConfig.colorChange}}>
       <Link to={homeConfig.path}
           style={{
             textDecoration:'none',
@@ -66,11 +64,8 @@ function BigItem(props){
           onClick={
             ()=>{
               if(homeConfig.color===itemConfig.fontColor){
-                 props.allocateShow(SetActivePages(homeConfig.id,props.show))
+                 props.allocateShow(SetActivePages(homeConfig.id,props.item))
                  homeConfig.color=itemConfig.colorChange 
-              }
-              else if(homeConfig.color===itemConfig.colorChange){
-                props.allocateShow(Clean(props.show))
               }
              }
            }
@@ -85,7 +80,5 @@ function BigItem(props){
       {itemList}
       </div>
     )
-} 
-
-
-export default BigItem 
+}
+export default Item

@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
-import BigItem from './BigItem'
-import itemData from '../MenuData'
-import {itemConfig,homeConfig} from '../MenuData'
+import Item from './item'
+import itemData,{itemConfig,homeConfig} from '../config/menuData'
 import {
     BrowserRouter as Router,
     Switch,
@@ -9,20 +8,19 @@ import {
   } from "react-router-dom";
 
 
-function BigMenu(){
+function Menu(){
     const [show,setShow]=useState(itemData)
     const [render,setRender] = useState(0)
     function allocateShow(amount){
         setShow(amount)
         setRender(render+1)
     }
-    console.log("oo")
     return(
     <Router>
     <div className="flex">
         <div>
         <ul  className="bigbackground " style={{background:itemConfig.background, color:itemConfig.fontColor}}>
-        <BigItem show={show} allocateShow={allocateShow}/>
+        <Item show={show} allocateShow={allocateShow}/>
         </ul>
     </div>
     <div className="moveRight">
@@ -55,4 +53,4 @@ function BigMenu(){
     )
 }
 
-export default BigMenu
+export default Menu

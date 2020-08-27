@@ -60,10 +60,11 @@
 .showStyle:hover{
     animation-name: showAnime;
     animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 @keyframes showAnime{
-    from {left: -5px;}
-    to {left:5px;}
+    from {left: 5px;}
+    to {left:15px;}
 }
 .submenuBackground{
     height:2em;

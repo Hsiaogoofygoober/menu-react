@@ -1,4 +1,4 @@
-import {itemConfig,homeConfig} from "./MenuData"
+import {itemConfig,homeConfig} from "../config/menuData"
 
 function SetActivePages(i,show){
     var a = show

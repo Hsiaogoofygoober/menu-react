@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
-import itemData, { itemConfig, button, homeConfig } from '../MenuData'
-import SmallItem from './SmallItem'
+import itemData, { itemConfig, button, homeConfig } from '../config/menuData'
+import SmallItem from './item'
 import {
     BrowserRouter as Router,
     Switch,
     Route,
   } from "react-router-dom";
 
-function SmallMenu(){
+function Menu(){
     const [show,setShow] = useState(false)
     const [item,setItem] = useState(itemData)
     const [render,setRender] = useState(0)
@@ -60,6 +60,12 @@ function SmallMenu(){
                 <div className="bigToSmall">
                 <Router>
                 <Switch>
+                <Route
+                path={homeConfig.path}
+                name = {homeConfig.name}
+                children={homeConfig.function}
+                exact={homeConfig.exact}
+                />
                 {itemData.map(route=>(
                 route.submenu.map(e => (
                 <Route
@@ -78,4 +84,4 @@ function SmallMenu(){
     
 }
 
-export default SmallMenu
+export default Menu

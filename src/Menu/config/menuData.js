@@ -1,10 +1,10 @@
-import Home from './pages/Home'
-import Subpage1 from './pages/Subpage1'
-import Subpage2 from './pages/Subpage2'
-import Subpage3 from './pages/Subpage3'
-import Subpage4 from './pages/Subpage4'
-import Subpage5 from './pages/Subpage5'
-import Subpage6 from './pages/SubPage6'
+import Home from '../pages/Home'
+import Subpage1 from '../pages/Subpage1'
+import Subpage2 from '../pages/Subpage2'
+import Subpage3 from '../pages/Subpage3'
+import Subpage4 from '../pages/Subpage4'
+import Subpage5 from '../pages/Subpage5'
+import Subpage6 from '../pages/SubPage6'
 
 const homeConfig={
     name:"home",
@@ -28,6 +28,7 @@ const itemData = [
             index:0,
             name:"subpage1",
             path:"/subpage1",
+            color:"#4d4d00",
             function: Subpage1,
         },
         {
@@ -35,6 +36,7 @@ const itemData = [
             index:1,
             name:"subpage2",
             path:"/subpage2",
+            color:"#4d4d00",
             function: Subpage2,
         },  
         ]
@@ -51,6 +53,7 @@ const itemData = [
                 index:0,
                 name:"subpage3",
                 path:"/subpage3",
+                color:"#4d4d00",
                 function: Subpage3,
             },
             {
@@ -58,6 +61,7 @@ const itemData = [
                 index:1,
                 name:"subpage4",
                 path:"/subpage4",
+                color:"#4d4d00",
                 function: Subpage4,
             },  
             ]
@@ -74,6 +78,7 @@ const itemData = [
                 index:0,
                 name:"subpage5",
                 path:"/subpage5",
+                color:"#4d4d00",
                 function: Subpage5,
             },
             {
@@ -81,6 +86,7 @@ const itemData = [
                 index:1,
                 name:"subpage6",
                 path:"/subpage6",
+                color:"#4d4d00",
                 function: Subpage6,
             },  
             ]
@@ -88,17 +94,14 @@ const itemData = [
     
 ]
 const itemConfig = {
-    id:1,
     background: "#ffffb3",
     fontColor: "#4d4d00",
     colorChange: "#ff6600"
 }
-const submenuData = {
-    
+const submenuData = {  
     background:"#ffcc66"
 }
 const button={
-    id:1,
     listButton:"fas fa-bars fa-2x",
     crossButton:"fas fa-times fa-2x"
 }
