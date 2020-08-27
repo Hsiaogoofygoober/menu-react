@@ -32,10 +32,10 @@ node.js version: `v12.18.2`
 
 ### `Requirement`
 
-"react": `^16.13.1`
-"react-dom": `^16.13.1`
-"react-router-dom": `^5.2.0`
-"react-scripts": `3.4.1`
+"react": `^16.13.1`<br>
+"react-dom": `^16.13.1`<br>
+"react-router-dom": `^5.2.0`<br>
+"react-scripts": `3.4.1`<br>
 
 ### `Usage`
 #### Config file
