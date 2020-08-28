@@ -25,7 +25,6 @@ const itemData = [
         submenu:[
         {
             id: 1,
-            index:0,
             name:"subpage1",
             path:"/subpage1",
             color:"#4d4d00",
@@ -33,7 +32,6 @@ const itemData = [
         },
         {
             id: 2,
-            index:1,
             name:"subpage2",
             path:"/subpage2",
             color:"#4d4d00",
@@ -50,7 +48,6 @@ const itemData = [
         submenu:[
             {
                 id: 3,
-                index:0,
                 name:"subpage3",
                 path:"/subpage3",
                 color:"#4d4d00",
@@ -58,7 +55,6 @@ const itemData = [
             },
             {
                 id:4,
-                index:1,
                 name:"subpage4",
                 path:"/subpage4",
                 color:"#4d4d00",
@@ -75,7 +71,6 @@ const itemData = [
         submenu:[
             {
                 id:5,
-                index:0,
                 name:"subpage5",
                 path:"/subpage5",
                 color:"#4d4d00",
@@ -83,7 +78,6 @@ const itemData = [
             },
             {
                 id:6,
-                index:1,
                 name:"subpage6",
                 path:"/subpage6",
                 color:"#4d4d00",
@@ -105,7 +99,10 @@ const button={
     listButton:"fas fa-bars fa-2x",
     crossButton:"fas fa-times fa-2x"
 }
+const screenSize={
+    size: 500
+}
 
 
-export  {itemData,itemConfig,button,submenuData,homeConfig}
+export  {itemData,itemConfig,button,submenuData,homeConfig,screenSize}
 export default itemData

@@ -38,17 +38,17 @@ node.js version: `v12.18.2`
 "react-scripts": `3.4.1`<br>
 
 ### `Usage`
-#### Config file
+#### `Config file`
 
 ```
 const homeConfig=
 {
-    name:'home',          *Name of the icon button*<br>
-    icon:"fas fa-home",   *The code used from Font Awesome to show the icon button*<br>
-    color:'#4d4d00',      *The initial color of the icon and the name*<br>
-    path:"/",             *The webpage path*<br>
-    function:Home,        *The function of the page*<br>
-    exact: true           *Let the user led to the path correctly*<br>
+    name:'home',          *Name of the icon button*
+    icon:"fas fa-home",   *The code used from Font Awesome to show the icon button*
+    color:'#4d4d00',      *The initial color of the icon and the name*
+    path:"/",             *The webpage path*
+    function:Home,        *The function of the page*
+    exact: true           *Let the user led to the path correctly*
 }
 ```
 ```
@@ -62,13 +62,13 @@ const itemData =
     submenu:[
     {
         id: 1,                 *The id of the submenu object*
-        index:0,               *The index of the submenu object, and needed to be set to '0'*
-                               *when initailize*
         name:"subpage1",       *Name of the submenu item*
         path:"/subpage1",      *Path of the submenu page*
         function: Subpage1,    *Fuction of the submenu page*
     },
+    ...
    ]
+   ...
 }
 ```
 ```
@@ -89,3 +89,13 @@ const button={
     crossButton:"fas fa-times fa-2x"*The code used from Font Awesome to show the icon button--cross*
 }
 ```
+```
+const screenSize={
+    size: 500     *the width when does the screen change,set it to px*
+}
+```
+#### `Change the width of menu`
+Go to `css` folder to find `background.css`, and then find class<br>
+`smallbackground` and `bigbackground`, change the value of `width`,<br>
+and so does its width value of `@keyframes`, go to `@keyframes bigToSmallAnime`<br>
+to change the value `from {left:5em}`

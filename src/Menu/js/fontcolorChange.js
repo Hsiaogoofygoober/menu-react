@@ -5,11 +5,9 @@ function fontcolorChange(i,show) {
         e.submenu.forEach(e => {
             if(e.id===i){
                 e.color=itemConfig.colorChange 
-                console.log("render1")
               }
               else{
                 e.color=itemConfig.fontColor
-                console.log("render2")
               }
         });
         

@@ -4,11 +4,11 @@
     list-style-type:none;
     font-size: 25px;
     line-height: 50px;
-    animation-name: backgroundanime;
+    animation-name: backgroundAnime;
     animation-duration: 0.5s;
     z-index: 1;
 }
-@keyframes  backgroundanime{
+@keyframes  backgroundAnime{
     from {
         width: 0em;}
     to {
