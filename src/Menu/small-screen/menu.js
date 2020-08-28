@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import itemData, { itemConfig, button } from '../MenuData'
-import SmallItem from './SmallItem'
+import itemData, { itemConfig, button } from '../config/menuData'
+import SmallItem from './item'
 import {
     BrowserRouter as Router,
     Switch,
@@ -48,9 +48,9 @@ function SmallMenu(){
     else{
         return(
             <div >
-                <i className={button.listButton} onClick={()=>setShow(!show)}></i>
-                <div className="bigToSmall">
+                <i className={button.listButton} onClick={()=>setShow(!show)}></i>   
                 <Router>
+                <div className="bigToSmall">
                 <Switch>
                     {itemData.map(route=>(
                     <Route
@@ -61,8 +61,9 @@ function SmallMenu(){
                     />
                      ))}
                 </Switch>
-                </Router>
                 </div>
+                </Router>
+                
             </div>
         )
     }

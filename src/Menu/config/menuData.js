@@ -1,9 +1,9 @@
-import Home from './pages/Home'
-import Page1 from './pages/Page1'
-import Page2 from './pages/Pages2'
-import Page3 from './pages/Pages3'
-import Page4 from './pages/Pages4'
-import Page5 from './pages/Page5'
+import Home from '../pages/Home'
+import Page1 from '../pages/Page1'
+import Page2 from '../pages/Pages2'
+import Page3 from '../pages/Pages3'
+import Page4 from '../pages/Pages4'
+import Page5 from '../pages/Page5'
 
 
 const itemData = [
@@ -63,19 +63,20 @@ const itemData = [
         color:'#4d4d00'
     }
 ]
-const itemConfig = {
-    id:1,
+const itemConfig = {    
     background: "#ffffb3",
     fontColor: "#4d4d00",
     colorChange: "#99ccff"
 }
 
 const button={
-    id:1,
     listButton:"fas fa-bars fa-2x",
     crossButton:"fas fa-times fa-2x"
 }
+const screenSize={
+    size: 500     
+}
 
 
-export  {itemData,itemConfig,button}
+export  {itemData,itemConfig,button,screenSize}
 export default itemData

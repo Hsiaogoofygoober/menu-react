@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import BigItem from './BigItem'
-import itemData from '../MenuData'
-import {itemConfig} from '../MenuData'
+import BigItem from './item'
+import itemData from '../config/menuData'
+import {itemConfig} from '../config/menuData'
 import {
     BrowserRouter as Router,
     Switch,

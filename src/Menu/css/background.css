@@ -14,6 +14,7 @@
     to {
         width: 27px;} 
 }
+
 .bigToSmall{
     position: absolute;
     animation-name: bigToSmallAnime;
@@ -32,7 +33,6 @@
     text-align: left;
     animation-name: smallBackgroundanime;
     animation-duration: 0.5s;
-    animation-direction:alternate;
 }
 @keyframes  smallBackgroundanime{
     from {
@@ -57,13 +57,11 @@
     width: 85px;
     animation-name: bigFontAnime;
     animation-duration: 0.5s;
-    
-    
 }
 @keyframes bigFontAnime{
     from {
         width:0px;
-        color:wheat;
+        
     }
     to {
         width: 85px;
@@ -76,10 +74,11 @@
 .showStyle:hover{
     animation-name: showAnime;
     animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 @keyframes showAnime{
-    from {left: -5px;}
-    to {left:5px;}
+    from {left: 0px;}
+    to {left:15px;}
 }
 
 

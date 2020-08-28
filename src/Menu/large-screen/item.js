@@ -1,8 +1,7 @@
 import React from 'react'
-import itemData, { itemConfig } from '../MenuData'
-import SetActivePages from './SetActivePages'
-import Clean from './Clean'
-import '../typesetting.css'
+import itemData, { itemConfig } from '../config/menuData'
+import SetActivePages from '../js/setActivePages'
+import Clean from '../js/clean'
 import {
     Link
   } from "react-router-dom";

@@ -1,6 +1,6 @@
 import React from 'react';
-import itemData from '../MenuData'
-import SetActivePages from '../Big/SetActivePages'
+import itemData from '../config/menuData'
+import SetActivePages from '../js/setActivePages'
 import {
     Link
   } from "react-router-dom";
