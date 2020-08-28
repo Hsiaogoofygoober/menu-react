@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `npm install`
 
-Run `npm install` in the terminal first
+Run `npm install` in the terminal first to download the npm libery
 
 ### `npm start`
 
